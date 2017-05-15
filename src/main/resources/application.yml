@@ -12,6 +12,8 @@ spring:
   couchbase:
     bucket:
       name: default
+  thymeleaf:
+    cache: true
 #Security properties
 security:
   oauth2:
@@ -19,5 +21,7 @@ security:
       prefer-token-info: true
       service-id: resource
       
+#thymeleaf
+
    
    
