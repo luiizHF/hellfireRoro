@@ -11,6 +11,10 @@ public class Person {
 	public String getName() {
 		return name;
 	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -21,4 +25,6 @@ public class Person {
 		this.age = age;
 	}
 	public Person(){}
+	
+	
 }
