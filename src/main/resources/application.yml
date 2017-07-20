@@ -1,27 +1,17 @@
-#Spring properties
 spring:
-  aop:
-   auto: true
-   proxy-target-class: false
-  messages:
-    always-use-message-format: false
-    basename: messages
-  mvc:
-    dispatch-trace-request: false
-    dispatch-options-request: true
-  couchbase:
-    bucket:
-      name: default
-  thymeleaf:
-    cache: true
-#Security properties
-security:
-  oauth2:
-    resource:
-      prefer-token-info: true
-      service-id: resource
-      
-#thymeleaf
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false
+    username: root
+    password: 
 
-   
+  jpa:
+    show-sql: true # Enable logging of SQL statements.
+    hibernate:
+      ddl-auto: update # DDL mode. This is actually a shortcut for the "hibernate.hbm2ddl.auto" property. Default to "create-drop" when using an embedded database, "none" otherwise.
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategyy # Hibernate 4 naming strategy fully qualified name. Not supported with Hibernate 5.
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect # Additional native properties to set on the JPA provider.
+
    

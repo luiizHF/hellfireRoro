@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" th:action="@{/ejercicio/exerTwo}" th:object="${car}" method="post">
+	<p>Marca: <input type="text" th:field="*{marca}"/></p>
+	<p th:if="${#fields.hasErrors('marca')}" th:errors="*{marca}"> Marca has errors</p>
+	<p>Modelo: <input type="text" th:field="*{modelo}"/></p>
+	<p th:if="${#fields.hasErrors('modelo')}" th:errors="*{modelo}"> Marca has errors</p>
+	<p>Tipo: <input type="number" th:field="*{type}"/></p>
+	<p th:if="${#fields.hasErrors('type')}" th:errors="*{type}"> Marca has errors</p>
+	<p>Año: <input type="number" th:field="*{year}"/></p>
+	<p th:if="${#fields.hasErrors('year')}" th:errors="*{year}"> Marca has errors</p>
+	
+	<p><input type="submit" value="Send"/></p>
+	</form>
+</body>
+</html>

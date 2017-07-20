@@ -19,11 +19,10 @@ import com.luiizhf.model.Person;
 @RequestMapping("/example")
 public class ExampleController {
 	
+
 	@Autowired
-	@Qualifier("ExampleComponent")
+	@Qualifier("exampleComponent")
 	private ExampleComponent exampleComponent;
-	
-	
 	public static final String EXAMPLE_VIEW = "example";
 	//primera forma (mas que todo para redirecciones)
 	@GetMapping("/exampleString")
